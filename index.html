@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M CODE 032 | CNC Glodanje</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+/* BRUSHED METAL BACKGROUND */
+body{
+    background:
+    repeating-linear-gradient(
+        90deg,
+        #2e2e2e,
+        #2e2e2e 1px,
+        #303030 1px,
+        #303030 3px
+    );
+    color:#e5e5e5;
+    line-height:1.6;
+}
+
+/* METALIC HEADER */
+header{
+    background:linear-gradient(135deg,#cfcfcf,#9e9e9e,#d9d9d9);
+    padding:15px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.5);
+}
+
+.logo img{
+    height:60px;
+}
+
+nav a{
+    color:#111;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#1f3c88;
+}
+
+/* HERO */
+.hero{
+    padding:140px 10%;
+    text-align:center;
+    background:rgba(0,0,0,0.75);
+    animation:fadeIn 1.2s ease;
+}
+
+.hero h2{
+    font-size:46px;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    color:#ccc;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 35px;
+    background:linear-gradient(to right,#f7941d,#ffb347);
+    color:#111;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:4px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* SECTIONS */
+section{
+    padding:100px 10%;
+    background:rgba(0,0,0,0.85);
+    margin-top:5px;
+}
+
+section h3{
+    font-size:28px;
+    margin-bottom:25px;
+    border-left:4px solid #f7941d;
+    padding-left:10px;
+}
+
+/* SERVICES */
+.services ul{
+    list-style:none;
+}
+
+.services li{
+    margin-bottom:12px;
+    transition:0.3s;
+}
+
+.services li:hover{
+    transform:translateX(5px);
+    color:#fff;
+}
+
+/* MACHINES */
+.machines{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.machine-card{
+    background:linear-gradient(145deg,#3a3a3a,#1f1f1f);
+    padding:20px;
+    border-radius:6px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.6);
+    transition:0.3s;
+}
+
+.machine-card:hover{
+    transform:translateY(-5px);
+}
+
+/* CONTACT */
+.contact form{
+    max-width:600px;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    background:#2a2a2a;
+    border:1px solid #555;
+    color:#fff;
+    border-radius:4px;
+}
+
+.contact input:focus,
+.contact textarea:focus{
+    outline:none;
+    border-color:#f7941d;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#111;
+    font-size:14px;
+    color:#888;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@media(max-width:768px){
+    .hero h2{font-size:30px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.jpeg" alt="M CODE 032 Logo">
+    </div>
+    <nav>
+        <a href="#usluge">Usluge</a>
+        <a href="#masine">Mašine</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>CNC GLODANJE VISOKE PRECIZNOSTI</h2>
+    <p>
+        Izrada delova od plastike, obojenih metala i čelika.
+        Fokus na kvalitetu, preciznosti i brzim rokovima isporuke.
+    </p>
+    <a href="#kontakt" class="btn">Zatražite ponudu</a>
+</section>
+
+<section id="usluge" class="services">
+    <h3>Naše usluge</h3>
+    <ul>
+        <li>✔ CNC glodanje</li>
+        <li>✔ Obrada plastike</li>
+        <li>✔ Obrada obojenih metala</li>
+        <li>✔ Obrada čelika</li>
+        <li>✔ Izrada delova po tehničkom crtežu</li>
+    </ul>
+</section>
+
+<section id="masine">
+    <h3>Naše mašine</h3>
+    <div class="machines">
+        <div class="machine-card">
+            <h4>CNC Vertikalni Obradni Centar</h4>
+            <p>Visoka preciznost i stabilnost pri obradi metala.</p>
+        </div>
+        <div class="machine-card">
+            <h4>CNC Glodalica</h4>
+            <p>Idealna za izradu kompleksnih delova po nacrtu.</p>
+        </div>
+        <div class="machine-card">
+            <h4>Prateća Oprema</h4>
+            <p>Merni alati i dodatna oprema za kontrolu kvaliteta.</p>
+        </div>
+    </div>
+</section>
+
+<section id="kontakt" class="contact">
+    <h3>Kontakt</h3>
+    <form onsubmit="sendEmail(event)">
+        <input type="text" id="ime" placeholder="Vaše ime" required>
+        <input type="email" id="email" placeholder="Vaš email" required>
+        <textarea id="poruka" rows="5" placeholder="Vaša poruka" required></textarea>
+        <button type="submit" class="btn">Pošalji upit</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 M CODE 032 | Sva prava zadržana
+</footer>
+
+<script>
+function sendEmail(e){
+    e.preventDefault();
+    var ime=document.getElementById("ime").value;
+    var email=document.getElementById("email").value;
+    var poruka=document.getElementById("poruka").value;
+
+    window.location.href=
+    "mailto:kontakt@mcode032.rs?subject=Upit sa sajta&body="
+    +"Ime: "+ime+"%0D%0A"
+    +"Email: "+email+"%0D%0A%0D%0A"
+    +poruka;
+}
+</script>
+
+</body>
+</html>
